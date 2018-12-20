@@ -11,7 +11,7 @@ function onFormSubmit(e) {
   
   var valid = areDatesValid(requestDetails.startDate, requestDetails.endDate);
   if (!valid) {
-    return mailer('dates');
+    return mailer('invalidDates, requestDetails');
   }
   
   createEvent(requestDetails);
